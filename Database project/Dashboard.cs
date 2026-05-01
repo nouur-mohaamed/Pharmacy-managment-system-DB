@@ -20,19 +20,32 @@ namespace Database_project
             
         }
 
-        private void nxtFormBtn_Click(object sender, EventArgs e)
+        private void iNVENTORYToolStripMenuItem_Click(object sender, EventArgs e)
         {
-        Inventory newform1 = new Inventory();
-            newform1.Show();
+            Inventory inv = new Inventory();
+            inv.Show();
             this.Hide();
-            purchase_form newform2 =new purchase_form();
-            newform2.Show();
-            customer_portal newform3 = new customer_portal();
-            newform3.Show();
-            record_managment newform4 = new record_managment();
-            newform4.Show();
+        }
 
+        private void cUSTOMERPORTALToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            customer_portal portal = new customer_portal();
+            portal.Show();
+            this.Hide();
+        }
 
+        private void pURCHASEFORMToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            purchase_form purchase = new purchase_form();
+            purchase.Show();
+            this.Hide();
+        }
+
+        private void rECORDSMANAGMENTFORMToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            record_managment records = new record_managment();
+            records.Show();
+            this.Hide();
         }
     }
 }

@@ -28,13 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.backBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // backBtn
+            // 
+            this.backBtn.Location = new System.Drawing.Point(12, 403);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(103, 35);
+            this.backBtn.TabIndex = 1;
+            this.backBtn.Text = "BACK";
+            this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // Inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(818, 450);
+            this.Controls.Add(this.backBtn);
             this.Name = "Inventory";
             this.Text = "Inventory";
             this.Load += new System.EventHandler(this.Inventory_Load);
@@ -43,5 +55,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Button backBtn;
     }
 }

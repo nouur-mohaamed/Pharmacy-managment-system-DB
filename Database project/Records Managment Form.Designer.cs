@@ -28,19 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.backBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // Form5
+            // backBtn
+            // 
+            this.backBtn.Location = new System.Drawing.Point(12, 403);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(103, 35);
+            this.backBtn.TabIndex = 0;
+            this.backBtn.Text = "BACK";
+            this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
+            // 
+            // record_managment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Form5";
+            this.Controls.Add(this.backBtn);
+            this.Name = "record_managment";
             this.Text = "Record Managment Form";
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Button backBtn;
     }
 }

@@ -28,19 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.backBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // Form3
+            // backBtn
+            // 
+            this.backBtn.Location = new System.Drawing.Point(12, 403);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(103, 35);
+            this.backBtn.TabIndex = 2;
+            this.backBtn.Text = "BACK";
+            this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
+            // 
+            // customer_portal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Form3";
+            this.Controls.Add(this.backBtn);
+            this.Name = "customer_portal";
             this.Text = "Customer Portal";
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Button backBtn;
     }
 }
