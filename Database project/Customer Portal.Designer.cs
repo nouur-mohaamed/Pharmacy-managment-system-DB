@@ -1,6 +1,6 @@
 ﻿namespace Database_project
 {
-    partial class Form2
+    partial class customer_portal
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // Form2
+            // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(818, 450);
-            this.Name = "Form2";
-            this.Text = "Form2";
-            this.Load += new System.EventHandler(this.Form2_Load);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "Form3";
+            this.Text = "Customer Portal";
             this.ResumeLayout(false);
 
         }

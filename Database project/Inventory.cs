@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Database_project
 {
-    public partial class Form2 : Form
+    public partial class Inventory : Form
     {
-        public Form2()
+        public Inventory()
         {
             InitializeComponent();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void Inventory_Load(object sender, EventArgs e)
         {
 
         }

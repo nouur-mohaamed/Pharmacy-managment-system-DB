@@ -1,6 +1,6 @@
 ﻿namespace Database_project
 {
-    partial class Form1
+    partial class Dashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -33,22 +33,23 @@
             // 
             // nxtFormBtn
             // 
-            this.nxtFormBtn.Location = new System.Drawing.Point(672, 404);
+            this.nxtFormBtn.Location = new System.Drawing.Point(756, 404);
             this.nxtFormBtn.Name = "nxtFormBtn";
-            this.nxtFormBtn.Size = new System.Drawing.Size(116, 34);
+            this.nxtFormBtn.Size = new System.Drawing.Size(130, 34);
             this.nxtFormBtn.TabIndex = 0;
             this.nxtFormBtn.Text = "Next";
             this.nxtFormBtn.UseVisualStyleBackColor = true;
             this.nxtFormBtn.Click += new System.EventHandler(this.nxtFormBtn_Click);
             // 
-            // Form1
+            // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(900, 450);
             this.Controls.Add(this.nxtFormBtn);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Name = "Dashboard";
+            this.Text = "Dashboard";
             this.ResumeLayout(false);
 
         }
