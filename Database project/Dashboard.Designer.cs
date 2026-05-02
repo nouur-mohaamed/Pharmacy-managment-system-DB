@@ -28,79 +28,216 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.iNVENTORYToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cUSTOMERPORTALToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pURCHASEFORMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rECORDSMANAGMENTFORMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.lblSubtitle = new System.Windows.Forms.Label();
+            this.btnInventory = new System.Windows.Forms.Button();
+            this.btnCustomer = new System.Windows.Forms.Button();
+            this.btnPurchase = new System.Windows.Forms.Button();
+            this.btnRecords = new System.Windows.Forms.Button();
+            this.pnlTotalDrugs = new System.Windows.Forms.Panel();
+            this.lblTotalDrugs = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblLowStock = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pnlTotalDrugs.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // lblTitle
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.iNVENTORYToolStripMenuItem,
-            this.cUSTOMERPORTALToolStripMenuItem,
-            this.pURCHASEFORMToolStripMenuItem,
-            this.rECORDSMANAGMENTFORMToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(900, 28);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(82, 28);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(669, 52);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "Pharmacy Management System";
             // 
-            // iNVENTORYToolStripMenuItem
+            // lblSubtitle
             // 
-            this.iNVENTORYToolStripMenuItem.Name = "iNVENTORYToolStripMenuItem";
-            this.iNVENTORYToolStripMenuItem.Size = new System.Drawing.Size(101, 24);
-            this.iNVENTORYToolStripMenuItem.Text = "INVENTORY";
-            this.iNVENTORYToolStripMenuItem.Click += new System.EventHandler(this.iNVENTORYToolStripMenuItem_Click);
+            this.lblSubtitle.AutoSize = true;
+            this.lblSubtitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblSubtitle.Font = new System.Drawing.Font("MV Boli", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubtitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.lblSubtitle.Location = new System.Drawing.Point(26, 113);
+            this.lblSubtitle.Name = "lblSubtitle";
+            this.lblSubtitle.Size = new System.Drawing.Size(472, 37);
+            this.lblSubtitle.TabIndex = 1;
+            this.lblSubtitle.Text = "Select Module to get started  ";
             // 
-            // cUSTOMERPORTALToolStripMenuItem
+            // btnInventory
             // 
-            this.cUSTOMERPORTALToolStripMenuItem.Name = "cUSTOMERPORTALToolStripMenuItem";
-            this.cUSTOMERPORTALToolStripMenuItem.Size = new System.Drawing.Size(153, 24);
-            this.cUSTOMERPORTALToolStripMenuItem.Text = "CUSTOMER PORTAL";
-            this.cUSTOMERPORTALToolStripMenuItem.Click += new System.EventHandler(this.cUSTOMERPORTALToolStripMenuItem_Click);
+            this.btnInventory.AutoSize = true;
+            this.btnInventory.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnInventory.FlatAppearance.BorderSize = 0;
+            this.btnInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInventory.Font = new System.Drawing.Font("ItalicC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInventory.ForeColor = System.Drawing.Color.White;
+            this.btnInventory.Location = new System.Drawing.Point(118, 178);
+            this.btnInventory.Name = "btnInventory";
+            this.btnInventory.Size = new System.Drawing.Size(242, 80);
+            this.btnInventory.TabIndex = 2;
+            this.btnInventory.Text = "📦 Inventory";
+            this.btnInventory.UseVisualStyleBackColor = false;
+            this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
             // 
-            // pURCHASEFORMToolStripMenuItem
+            // btnCustomer
             // 
-            this.pURCHASEFORMToolStripMenuItem.Name = "pURCHASEFORMToolStripMenuItem";
-            this.pURCHASEFORMToolStripMenuItem.Size = new System.Drawing.Size(140, 24);
-            this.pURCHASEFORMToolStripMenuItem.Text = "PURCHASE FORM";
-            this.pURCHASEFORMToolStripMenuItem.Click += new System.EventHandler(this.pURCHASEFORMToolStripMenuItem_Click);
+            this.btnCustomer.AutoSize = true;
+            this.btnCustomer.BackColor = System.Drawing.Color.HotPink;
+            this.btnCustomer.FlatAppearance.BorderSize = 0;
+            this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomer.Font = new System.Drawing.Font("ItalicC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomer.ForeColor = System.Drawing.Color.White;
+            this.btnCustomer.Location = new System.Drawing.Point(118, 264);
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.Size = new System.Drawing.Size(337, 80);
+            this.btnCustomer.TabIndex = 3;
+            this.btnCustomer.Text = "👤 Customer Portal";
+            this.btnCustomer.UseVisualStyleBackColor = false;
+            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
-            // rECORDSMANAGMENTFORMToolStripMenuItem
+            // btnPurchase
             // 
-            this.rECORDSMANAGMENTFORMToolStripMenuItem.Name = "rECORDSMANAGMENTFORMToolStripMenuItem";
-            this.rECORDSMANAGMENTFORMToolStripMenuItem.Size = new System.Drawing.Size(230, 24);
-            this.rECORDSMANAGMENTFORMToolStripMenuItem.Text = "RECORDS MANAGMENT FORM";
-            this.rECORDSMANAGMENTFORMToolStripMenuItem.Click += new System.EventHandler(this.rECORDSMANAGMENTFORMToolStripMenuItem_Click);
+            this.btnPurchase.AutoSize = true;
+            this.btnPurchase.BackColor = System.Drawing.Color.Orange;
+            this.btnPurchase.FlatAppearance.BorderSize = 0;
+            this.btnPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPurchase.Font = new System.Drawing.Font("ItalicC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPurchase.ForeColor = System.Drawing.Color.White;
+            this.btnPurchase.Location = new System.Drawing.Point(387, 178);
+            this.btnPurchase.Name = "btnPurchase";
+            this.btnPurchase.Size = new System.Drawing.Size(325, 80);
+            this.btnPurchase.TabIndex = 4;
+            this.btnPurchase.Text = "🛒 Purchase Form";
+            this.btnPurchase.UseVisualStyleBackColor = false;
+            this.btnPurchase.Click += new System.EventHandler(this.btnPurchase_Click);
+            // 
+            // btnRecords
+            // 
+            this.btnRecords.AutoSize = true;
+            this.btnRecords.BackColor = System.Drawing.Color.MediumOrchid;
+            this.btnRecords.FlatAppearance.BorderSize = 0;
+            this.btnRecords.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecords.Font = new System.Drawing.Font("ItalicC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecords.ForeColor = System.Drawing.Color.White;
+            this.btnRecords.Location = new System.Drawing.Point(470, 264);
+            this.btnRecords.Name = "btnRecords";
+            this.btnRecords.Size = new System.Drawing.Size(242, 80);
+            this.btnRecords.TabIndex = 5;
+            this.btnRecords.Text = "📋 Records";
+            this.btnRecords.UseVisualStyleBackColor = false;
+            this.btnRecords.Click += new System.EventHandler(this.btnRecords_Click);
+            // 
+            // pnlTotalDrugs
+            // 
+            this.pnlTotalDrugs.BackColor = System.Drawing.Color.White;
+            this.pnlTotalDrugs.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlTotalDrugs.Controls.Add(this.lblTotalDrugs);
+            this.pnlTotalDrugs.Controls.Add(this.label1);
+            this.pnlTotalDrugs.Location = new System.Drawing.Point(91, 399);
+            this.pnlTotalDrugs.Name = "pnlTotalDrugs";
+            this.pnlTotalDrugs.Size = new System.Drawing.Size(223, 133);
+            this.pnlTotalDrugs.TabIndex = 6;
+            // 
+            // lblTotalDrugs
+            // 
+            this.lblTotalDrugs.AutoSize = true;
+            this.lblTotalDrugs.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalDrugs.ForeColor = System.Drawing.Color.Lime;
+            this.lblTotalDrugs.Location = new System.Drawing.Point(47, 57);
+            this.lblTotalDrugs.Name = "lblTotalDrugs";
+            this.lblTotalDrugs.Size = new System.Drawing.Size(43, 46);
+            this.lblTotalDrugs.TabIndex = 1;
+            this.lblTotalDrugs.Text = "0";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(124, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Total Drugs";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.lblLowStock);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Location = new System.Drawing.Point(528, 399);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(223, 133);
+            this.panel1.TabIndex = 7;
+            // 
+            // lblLowStock
+            // 
+            this.lblLowStock.AutoSize = true;
+            this.lblLowStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLowStock.ForeColor = System.Drawing.Color.Red;
+            this.lblLowStock.Location = new System.Drawing.Point(47, 57);
+            this.lblLowStock.Name = "lblLowStock";
+            this.lblLowStock.Size = new System.Drawing.Size(43, 46);
+            this.lblLowStock.TabIndex = 1;
+            this.lblLowStock.Text = "0";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(170, 25);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Low Stock Items";
             // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 450);
-            this.Controls.Add(this.menuStrip1);
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.ClientSize = new System.Drawing.Size(878, 544);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlTotalDrugs);
+            this.Controls.Add(this.btnRecords);
+            this.Controls.Add(this.btnPurchase);
+            this.Controls.Add(this.btnCustomer);
+            this.Controls.Add(this.btnInventory);
+            this.Controls.Add(this.lblSubtitle);
+            this.Controls.Add(this.lblTitle);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Dashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.Load += new System.EventHandler(this.Dashboard_Load);
+            this.pnlTotalDrugs.ResumeLayout(false);
+            this.pnlTotalDrugs.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem iNVENTORYToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cUSTOMERPORTALToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pURCHASEFORMToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rECORDSMANAGMENTFORMToolStripMenuItem;
+
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Label lblSubtitle;
+        private System.Windows.Forms.Button btnInventory;
+        private System.Windows.Forms.Button btnCustomer;
+        private System.Windows.Forms.Button btnPurchase;
+        private System.Windows.Forms.Button btnRecords;
+        private System.Windows.Forms.Panel pnlTotalDrugs;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTotalDrugs;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblLowStock;
+        private System.Windows.Forms.Label label3;
     }
 }
 
