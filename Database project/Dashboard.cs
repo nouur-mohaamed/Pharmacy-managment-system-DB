@@ -25,12 +25,10 @@ namespace Database_project
             {
                 conn.Open();
 
-                // Total Drugs
                 string totalDrugsQuery = "SELECT COUNT(*) FROM DRUG";
                 SqlCommand cmd1 = new SqlCommand(totalDrugsQuery, conn);
                 lblTotalDrugs.Text = cmd1.ExecuteScalar().ToString();
 
-                // Low Stock (items where quantity < 50)
                 string lowStockQuery = "SELECT COUNT(*) FROM EXIST_IN WHERE CURRENT_QUANTITY < 50";
                 SqlCommand cmd2 = new SqlCommand(lowStockQuery, conn);
                 lblLowStock.Text = cmd2.ExecuteScalar().ToString();
@@ -69,6 +67,11 @@ namespace Database_project
             record_managment records = new record_managment();
             records.Show();
             this.Hide();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
