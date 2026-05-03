@@ -52,7 +52,9 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // backBtn
@@ -72,7 +74,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(236, 41);
+            this.label1.Location = new System.Drawing.Point(294, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(338, 40);
             this.label1.TabIndex = 3;
@@ -82,11 +84,11 @@
             // 
             this.dgvCustomers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCustomers.Location = new System.Drawing.Point(26, 103);
+            this.dgvCustomers.Location = new System.Drawing.Point(0, 98);
             this.dgvCustomers.Name = "dgvCustomers";
             this.dgvCustomers.RowHeadersWidth = 62;
             this.dgvCustomers.RowTemplate.Height = 28;
-            this.dgvCustomers.Size = new System.Drawing.Size(940, 200);
+            this.dgvCustomers.Size = new System.Drawing.Size(980, 208);
             this.dgvCustomers.TabIndex = 4;
             this.dgvCustomers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomers_CellClick);
             // 
@@ -312,12 +314,24 @@
             this.txtPhone.Size = new System.Drawing.Size(180, 26);
             this.txtPhone.TabIndex = 25;
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.HotPink;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(980, 100);
+            this.panel1.TabIndex = 26;
+            // 
             // customer_portal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(978, 844);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnClear);
@@ -340,7 +354,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvCustomers);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.backBtn);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "customer_portal";
@@ -348,6 +361,8 @@
             this.Load += new System.EventHandler(this.customer_portal_Load);
             this.Click += new System.EventHandler(this.backBtn_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -379,5 +394,6 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.Panel panel1;
     }
 }
