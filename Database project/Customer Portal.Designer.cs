@@ -50,18 +50,21 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtPhone = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.SuspendLayout();
             // 
             // backBtn
             // 
-            this.backBtn.Location = new System.Drawing.Point(12, 670);
+            this.backBtn.Location = new System.Drawing.Point(12, 635);
             this.backBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.backBtn.Name = "backBtn";
             this.backBtn.Size = new System.Drawing.Size(116, 44);
             this.backBtn.TabIndex = 2;
             this.backBtn.Text = "BACK";
             this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // label1
             // 
@@ -77,14 +80,13 @@
             // 
             // dgvCustomers
             // 
-            this.dgvCustomers.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvCustomers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCustomers.Location = new System.Drawing.Point(26, 103);
             this.dgvCustomers.Name = "dgvCustomers";
             this.dgvCustomers.RowHeadersWidth = 62;
             this.dgvCustomers.RowTemplate.Height = 28;
-            this.dgvCustomers.Size = new System.Drawing.Size(840, 200);
+            this.dgvCustomers.Size = new System.Drawing.Size(940, 200);
             this.dgvCustomers.TabIndex = 4;
             this.dgvCustomers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomers_CellClick);
             // 
@@ -126,7 +128,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(33, 511);
+            this.label5.Location = new System.Drawing.Point(453, 513);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 25);
             this.label5.TabIndex = 8;
@@ -168,28 +170,28 @@
             // 
             // txtSSN
             // 
-            this.txtSSN.Location = new System.Drawing.Point(183, 342);
+            this.txtSSN.Location = new System.Drawing.Point(233, 342);
             this.txtSSN.Name = "txtSSN";
             this.txtSSN.Size = new System.Drawing.Size(180, 26);
             this.txtSSN.TabIndex = 12;
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(183, 399);
+            this.txtFirstName.Location = new System.Drawing.Point(233, 397);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(180, 26);
             this.txtFirstName.TabIndex = 13;
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(183, 449);
+            this.txtLastName.Location = new System.Drawing.Point(233, 449);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(180, 26);
             this.txtLastName.TabIndex = 14;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(183, 512);
+            this.txtEmail.Location = new System.Drawing.Point(643, 512);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(180, 26);
             this.txtEmail.TabIndex = 15;
@@ -290,12 +292,34 @@
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(38, 513);
+            this.label9.Name = "label9";
+            this.label9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label9.Size = new System.Drawing.Size(99, 25);
+            this.label9.TabIndex = 24;
+            this.label9.Text = " : Phone ";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // txtPhone
+            // 
+            this.txtPhone.Location = new System.Drawing.Point(233, 514);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(180, 26);
+            this.txtPhone.TabIndex = 25;
+            // 
             // customer_portal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(878, 744);
+            this.ClientSize = new System.Drawing.Size(978, 844);
+            this.Controls.Add(this.txtPhone);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnDelete);
@@ -322,6 +346,7 @@
             this.Name = "customer_portal";
             this.Text = "Customer Portal";
             this.Load += new System.EventHandler(this.customer_portal_Load);
+            this.Click += new System.EventHandler(this.backBtn_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -352,5 +377,7 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtPhone;
     }
 }

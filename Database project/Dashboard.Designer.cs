@@ -215,7 +215,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(972, 94);
             this.panel2.TabIndex = 8;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // Dashboard
             // 
