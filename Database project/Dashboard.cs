@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace Database_project
 {
@@ -67,11 +67,6 @@ namespace Database_project
             record_managment records = new record_managment();
             records.Show();
             this.Hide();
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
