@@ -32,19 +32,19 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.Purchase = new System.Windows.Forms.Label();
             this.DrugID = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.DidInput = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.QuantutyInput = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.SSN = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SSNInput = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.Remove = new System.Windows.Forms.Button();
+            this.Clear = new System.Windows.Forms.Button();
             this.DID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,8 +53,8 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.TotalBill = new System.Windows.Forms.Label();
+            this.Confirm = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
@@ -74,12 +74,12 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.panel1.BackColor = System.Drawing.Color.Orange;
             this.panel1.Controls.Add(this.Purchase);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1432, 121);
+            this.panel1.Size = new System.Drawing.Size(1432, 173);
             this.panel1.TabIndex = 2;
             // 
             // Purchase
@@ -87,7 +87,7 @@
             this.Purchase.AutoSize = true;
             this.Purchase.Font = new System.Drawing.Font("Segoe UI", 19.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Purchase.ForeColor = System.Drawing.Color.White;
-            this.Purchase.Location = new System.Drawing.Point(587, 26);
+            this.Purchase.Location = new System.Drawing.Point(572, 50);
             this.Purchase.Name = "Purchase";
             this.Purchase.Size = new System.Drawing.Size(341, 71);
             this.Purchase.TabIndex = 3;
@@ -106,12 +106,12 @@
             this.DrugID.Text = "Drug ID :";
             this.DrugID.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox1
+            // DidInput
             // 
-            this.textBox1.Location = new System.Drawing.Point(185, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(400, 31);
-            this.textBox1.TabIndex = 5;
+            this.DidInput.Location = new System.Drawing.Point(204, 30);
+            this.DidInput.Name = "DidInput";
+            this.DidInput.Size = new System.Drawing.Size(400, 31);
+            this.DidInput.TabIndex = 5;
             // 
             // dataGridView1
             // 
@@ -123,11 +123,11 @@
             this.Quantity,
             this.Price,
             this.TPrice});
-            this.dataGridView1.Location = new System.Drawing.Point(72, 292);
+            this.dataGridView1.Location = new System.Drawing.Point(62, 292);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(1305, 311);
+            this.dataGridView1.Size = new System.Drawing.Size(1332, 311);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -135,14 +135,14 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.textBox3);
+            this.panel4.Controls.Add(this.QuantutyInput);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.textBox1);
+            this.panel4.Controls.Add(this.DidInput);
             this.panel4.Controls.Add(this.DrugID);
             this.panel4.Location = new System.Drawing.Point(41, 634);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(751, 181);
+            this.panel4.Size = new System.Drawing.Size(694, 181);
             this.panel4.TabIndex = 6;
             // 
             // label4
@@ -155,13 +155,13 @@
             this.label4.Size = new System.Drawing.Size(0, 45);
             this.label4.TabIndex = 2;
             // 
-            // textBox3
+            // QuantutyInput
             // 
-            this.textBox3.Location = new System.Drawing.Point(185, 110);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(400, 31);
-            this.textBox3.TabIndex = 7;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.QuantutyInput.Location = new System.Drawing.Point(204, 109);
+            this.QuantutyInput.Name = "QuantutyInput";
+            this.QuantutyInput.Size = new System.Drawing.Size(400, 31);
+            this.QuantutyInput.TabIndex = 7;
+            this.QuantutyInput.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label5
             // 
@@ -213,7 +213,7 @@
             this.panel2.Controls.Add(this.SSNInput);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.SSN);
-            this.panel2.Location = new System.Drawing.Point(41, 172);
+            this.panel2.Location = new System.Drawing.Point(58, 179);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1336, 93);
             this.panel2.TabIndex = 3;
@@ -222,35 +222,35 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Green;
             this.button1.ForeColor = System.Drawing.Color.Snow;
-            this.button1.Location = new System.Drawing.Point(822, 634);
+            this.button1.Location = new System.Drawing.Point(772, 633);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(141, 92);
             this.button1.TabIndex = 7;
             this.button1.Text = "ADD";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // Remove
             // 
-            this.button2.BackColor = System.Drawing.Color.OrangeRed;
-            this.button2.ForeColor = System.Drawing.Color.Snow;
-            this.button2.Location = new System.Drawing.Point(1005, 635);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(141, 91);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Remove";
-            this.button2.UseVisualStyleBackColor = false;
+            this.Remove.BackColor = System.Drawing.Color.OrangeRed;
+            this.Remove.ForeColor = System.Drawing.Color.Snow;
+            this.Remove.Location = new System.Drawing.Point(967, 635);
+            this.Remove.Name = "Remove";
+            this.Remove.Size = new System.Drawing.Size(141, 91);
+            this.Remove.TabIndex = 8;
+            this.Remove.Text = "Remove";
+            this.Remove.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // Clear
             // 
-            this.button3.BackColor = System.Drawing.Color.Gray;
-            this.button3.ForeColor = System.Drawing.Color.Snow;
-            this.button3.Location = new System.Drawing.Point(1194, 641);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(141, 84);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Clear";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.Clear.BackColor = System.Drawing.Color.Gray;
+            this.Clear.ForeColor = System.Drawing.Color.Snow;
+            this.Clear.Location = new System.Drawing.Point(1153, 638);
+            this.Clear.Name = "Clear";
+            this.Clear.Size = new System.Drawing.Size(141, 84);
+            this.Clear.TabIndex = 9;
+            this.Clear.Text = "Clear";
+            this.Clear.UseVisualStyleBackColor = false;
+            this.Clear.Click += new System.EventHandler(this.button3_Click);
             // 
             // DID
             // 
@@ -316,41 +316,43 @@
             this.label3.TabIndex = 10;
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label6
+            // TotalBill
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(614, 882);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(155, 50);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Total = ";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.TotalBill.AutoSize = true;
+            this.TotalBill.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalBill.ForeColor = System.Drawing.Color.White;
+            this.TotalBill.Location = new System.Drawing.Point(763, 807);
+            this.TotalBill.Name = "TotalBill";
+            this.TotalBill.Size = new System.Drawing.Size(155, 50);
+            this.TotalBill.TabIndex = 11;
+            this.TotalBill.Text = "Total = ";
+            this.TotalBill.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.TotalBill.Click += new System.EventHandler(this.label6_Click);
             // 
-            // button4
+            // Confirm
             // 
-            this.button4.BackColor = System.Drawing.Color.LimeGreen;
-            this.button4.ForeColor = System.Drawing.Color.Snow;
-            this.button4.Location = new System.Drawing.Point(1153, 868);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(241, 92);
-            this.button4.TabIndex = 12;
-            this.button4.Text = "Confirm Purchase";
-            this.button4.UseVisualStyleBackColor = false;
+            this.Confirm.BackColor = System.Drawing.Color.LimeGreen;
+            this.Confirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Confirm.ForeColor = System.Drawing.Color.Snow;
+            this.Confirm.Location = new System.Drawing.Point(1153, 868);
+            this.Confirm.Name = "Confirm";
+            this.Confirm.Size = new System.Drawing.Size(241, 92);
+            this.Confirm.TabIndex = 12;
+            this.Confirm.Text = "Confirm Purchase";
+            this.Confirm.UseVisualStyleBackColor = false;
             // 
             // purchase_form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(1432, 988);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.label6);
+            this.ClientSize = new System.Drawing.Size(1432, 1049);
+            this.Controls.Add(this.Confirm);
+            this.Controls.Add(this.TotalBill);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Clear);
+            this.Controls.Add(this.Remove);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.dataGridView1);
@@ -358,6 +360,9 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.backBtn);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1458, 1120);
             this.Name = "purchase_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Purchase Form";
@@ -379,10 +384,10 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label Purchase;
         private System.Windows.Forms.Label DrugID;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox DidInput;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox QuantutyInput;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label SSN;
@@ -390,8 +395,8 @@
         private System.Windows.Forms.TextBox SSNInput;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button Remove;
+        private System.Windows.Forms.Button Clear;
         private System.Windows.Forms.DataGridViewTextBoxColumn DID;
         private System.Windows.Forms.DataGridViewTextBoxColumn DName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
@@ -400,7 +405,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label TotalBill;
+        private System.Windows.Forms.Button Confirm;
     }
 }
