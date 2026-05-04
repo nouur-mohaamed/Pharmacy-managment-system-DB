@@ -124,6 +124,7 @@
             this.Price,
             this.TPrice});
             this.dataGridView1.Location = new System.Drawing.Point(62, 292);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(30);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.RowTemplate.Height = 33;
@@ -133,6 +134,7 @@
             // 
             // panel4
             // 
+            this.panel4.AutoSize = true;
             this.panel4.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.QuantutyInput);
@@ -142,7 +144,7 @@
             this.panel4.Controls.Add(this.DrugID);
             this.panel4.Location = new System.Drawing.Point(41, 634);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(694, 181);
+            this.panel4.Size = new System.Drawing.Size(694, 219);
             this.panel4.TabIndex = 6;
             // 
             // label4

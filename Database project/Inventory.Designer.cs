@@ -115,6 +115,7 @@
             this.Category,
             this.supplier});
             this.dataGridView1.Location = new System.Drawing.Point(33, 160);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(30);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 82;
@@ -389,6 +390,7 @@
             this.Controls.Add(this.backBtn);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Inventory";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inventory";
             this.Load += new System.EventHandler(this.Inventory_Load);
             this.panel1.ResumeLayout(false);
