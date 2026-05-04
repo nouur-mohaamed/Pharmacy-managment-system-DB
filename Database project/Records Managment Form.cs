@@ -221,11 +221,6 @@ namespace Database_project
             this.Close();
         }
 
-        private void btnLoad_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnDelete_Click_1(object sender, EventArgs e)
         {
 
