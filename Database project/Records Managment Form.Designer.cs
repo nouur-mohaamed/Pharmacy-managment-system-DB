@@ -202,7 +202,7 @@
             this.btnDelete.TabIndex = 14;
             this.btnDelete.Text = "🗑️ Delete Record";
             this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnExport
             // 
@@ -229,7 +229,6 @@
             this.lblCount.Size = new System.Drawing.Size(221, 32);
             this.lblCount.TabIndex = 16;
             this.lblCount.Text = "Total Records: 0";
-            this.lblCount.Click += new System.EventHandler(this.lblCount_Click);
             // 
             // record_managment
             // 
