@@ -46,7 +46,10 @@ namespace Database_project
                 {
                     query = @"SELECT p.PURCHASE_NUM AS [Purchase#], 
                              c.First_Name + ' ' + c.Last_Name AS [Customer],
-                             ph.C_PHONE AS [Phone],
+                             STUFF((SELECT ', ' + ph.C_PHONE 
+                                    FROM PHONE ph 
+                                    WHERE ph.C_SSN = c.CSSN 
+                                    FOR XML PATH('')), 1, 2, '') AS [Phone],
                              d.D_NAME AS [Drug],
                              p.Purchased_Quantity AS [Quantity],
                              d.PRICE * p.Purchased_Quantity AS [Total Price],
@@ -56,14 +59,15 @@ namespace Database_project
                              p.Serial_NUM AS [Drug Serial]
                              FROM PURCHASE p
                              JOIN CUSTOMER c ON p.C_SSN = c.CSSN
-                             LEFT JOIN PHONE ph ON c.CSSN = ph.C_SSN
                              JOIN DRUG d ON p.Serial_NUM = d.SERIAL_NUM
                              JOIN BRANCH b ON p.B_ID = b.BID
                              WHERE p.Purchase_Date BETWEEN @from AND @to
                              AND (c.First_Name LIKE @search 
                              OR c.Last_Name LIKE @search 
                              OR d.D_NAME LIKE @search
-                             OR ph.C_PHONE LIKE @search
+                             OR EXISTS (SELECT 1 FROM PHONE ph2 
+                                       WHERE ph2.C_SSN = c.CSSN 
+                                       AND ph2.C_PHONE LIKE @search)
                              OR CAST(p.PURCHASE_NUM AS VARCHAR) LIKE @search)
                              ORDER BY p.Purchase_Date DESC";
                 }
@@ -99,9 +103,9 @@ namespace Database_project
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dgvRecords.DataSource = dt;
+                dgvRecords.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-                // Show record count
-                lblCount.Text = $"Total Records: {dt.Rows.Count}";
+                lblCount.Text = "Total Records: " + dt.Rows.Count;
             }
             catch (Exception ex)
             {
@@ -140,15 +144,14 @@ namespace Database_project
 
                     if (cmbTable.SelectedItem.ToString() == "Purchase Records")
                     {
-                        string purchaseNum = dgvRecords.SelectedRows[0].Cells["Purchase#"].Value.ToString();
                         string cSSN = dgvRecords.SelectedRows[0].Cells["Customer SSN"].Value.ToString();
                         string serialNum = dgvRecords.SelectedRows[0].Cells["Drug Serial"].Value.ToString();
-                        string bID = dgvRecords.SelectedRows[0].Cells["Branch"].Value.ToString();
+                        string branchName = dgvRecords.SelectedRows[0].Cells["Branch"].Value.ToString();
 
                         // Get branch ID from branch name
                         string getBID = "SELECT BID FROM BRANCH WHERE BNAME = @bname";
                         SqlCommand getCmd = new SqlCommand(getBID, conn);
-                        getCmd.Parameters.AddWithValue("@bname", bID);
+                        getCmd.Parameters.AddWithValue("@bname", branchName);
                         string branchID = getCmd.ExecuteScalar().ToString();
 
                         string query = "DELETE FROM PURCHASE WHERE C_SSN=@ssn AND Serial_NUM=@serial AND B_ID=@bid";
@@ -198,14 +201,13 @@ namespace Database_project
             foreach (DataGridViewCell cell in dgvRecords.SelectedRows[0].Cells)
             {
                 if (cell.Value != null)
-                    details += $"{dgvRecords.Columns[cell.ColumnIndex].HeaderText}: {cell.Value}\n";
+                    details += dgvRecords.Columns[cell.ColumnIndex].HeaderText + ": " + cell.Value + "\n";
             }
             MessageBox.Show(details, "Record Details", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void cmbTable_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Show/hide date filters based on selected table
             bool isPurchase = cmbTable.SelectedItem.ToString() == "Purchase Records";
             dtpFrom.Visible = isPurchase;
             dtpTo.Visible = isPurchase;
@@ -219,21 +221,6 @@ namespace Database_project
             Dashboard dashboard = new Dashboard();
             dashboard.Show();
             this.Close();
-        }
-
-        private void btnLoad_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnDelete_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblCount_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
