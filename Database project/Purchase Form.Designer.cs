@@ -34,24 +34,26 @@
             this.DrugID = new System.Windows.Forms.Label();
             this.DidInput = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.QuantutyInput = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.SSN = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.SSNInput = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.Remove = new System.Windows.Forms.Button();
-            this.Clear = new System.Windows.Forms.Button();
             this.DID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.PDate = new System.Windows.Forms.DateTimePicker();
+            this.QuantutyInput = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.SSN = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.SSNInput = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.BranchComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Remove = new System.Windows.Forms.Button();
+            this.Clear = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.TotalBill = new System.Windows.Forms.Label();
             this.Confirm = new System.Windows.Forms.Button();
@@ -63,7 +65,7 @@
             // 
             // backBtn
             // 
-            this.backBtn.Location = new System.Drawing.Point(25, 905);
+            this.backBtn.Location = new System.Drawing.Point(69, 980);
             this.backBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.backBtn.Name = "backBtn";
             this.backBtn.Size = new System.Drawing.Size(154, 55);
@@ -101,16 +103,17 @@
             this.DrugID.ForeColor = System.Drawing.Color.White;
             this.DrugID.Location = new System.Drawing.Point(22, 20);
             this.DrugID.Name = "DrugID";
-            this.DrugID.Size = new System.Drawing.Size(157, 45);
+            this.DrugID.Size = new System.Drawing.Size(240, 45);
             this.DrugID.TabIndex = 3;
-            this.DrugID.Text = "Drug ID :";
+            this.DrugID.Text = "Drug Serial N :";
             this.DrugID.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // DidInput
             // 
-            this.DidInput.Location = new System.Drawing.Point(204, 30);
+            this.DidInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DidInput.Location = new System.Drawing.Point(268, 23);
             this.DidInput.Name = "DidInput";
-            this.DidInput.Size = new System.Drawing.Size(400, 31);
+            this.DidInput.Size = new System.Drawing.Size(400, 44);
             this.DidInput.TabIndex = 5;
             // 
             // dataGridView1
@@ -123,7 +126,7 @@
             this.Quantity,
             this.Price,
             this.TPrice});
-            this.dataGridView1.Location = new System.Drawing.Point(62, 292);
+            this.dataGridView1.Location = new System.Drawing.Point(61, 330);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(30);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 82;
@@ -131,128 +134,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1332, 311);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // panel4
-            // 
-            this.panel4.AutoSize = true;
-            this.panel4.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.QuantutyInput);
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.DidInput);
-            this.panel4.Controls.Add(this.DrugID);
-            this.panel4.Location = new System.Drawing.Point(41, 634);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(694, 219);
-            this.panel4.TabIndex = 6;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(12, 172);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 45);
-            this.label4.TabIndex = 2;
-            // 
-            // QuantutyInput
-            // 
-            this.QuantutyInput.Location = new System.Drawing.Point(204, 109);
-            this.QuantutyInput.Name = "QuantutyInput";
-            this.QuantutyInput.Size = new System.Drawing.Size(400, 31);
-            this.QuantutyInput.TabIndex = 7;
-            this.QuantutyInput.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(22, 96);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(176, 45);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Quantity : ";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // SSN
-            // 
-            this.SSN.AutoSize = true;
-            this.SSN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SSN.ForeColor = System.Drawing.Color.White;
-            this.SSN.Location = new System.Drawing.Point(3, 18);
-            this.SSN.Name = "SSN";
-            this.SSN.Size = new System.Drawing.Size(261, 45);
-            this.SSN.TabIndex = 0;
-            this.SSN.Text = "Customer SSN : ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(12, 172);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 45);
-            this.label2.TabIndex = 2;
-            // 
-            // SSNInput
-            // 
-            this.SSNInput.Location = new System.Drawing.Point(270, 31);
-            this.SSNInput.Name = "SSNInput";
-            this.SSNInput.Size = new System.Drawing.Size(293, 31);
-            this.SSNInput.TabIndex = 4;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.SSNInput);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.SSN);
-            this.panel2.Location = new System.Drawing.Point(58, 179);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1336, 93);
-            this.panel2.TabIndex = 3;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Green;
-            this.button1.ForeColor = System.Drawing.Color.Snow;
-            this.button1.Location = new System.Drawing.Point(772, 633);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 92);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "ADD";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // Remove
-            // 
-            this.Remove.BackColor = System.Drawing.Color.OrangeRed;
-            this.Remove.ForeColor = System.Drawing.Color.Snow;
-            this.Remove.Location = new System.Drawing.Point(967, 635);
-            this.Remove.Name = "Remove";
-            this.Remove.Size = new System.Drawing.Size(141, 91);
-            this.Remove.TabIndex = 8;
-            this.Remove.Text = "Remove";
-            this.Remove.UseVisualStyleBackColor = false;
-            // 
-            // Clear
-            // 
-            this.Clear.BackColor = System.Drawing.Color.Gray;
-            this.Clear.ForeColor = System.Drawing.Color.Snow;
-            this.Clear.Location = new System.Drawing.Point(1153, 638);
-            this.Clear.Name = "Clear";
-            this.Clear.Size = new System.Drawing.Size(141, 84);
-            this.Clear.TabIndex = 9;
-            this.Clear.Text = "Clear";
-            this.Clear.UseVisualStyleBackColor = false;
-            this.Clear.Click += new System.EventHandler(this.button3_Click);
             // 
             // DID
             // 
@@ -289,13 +170,128 @@
             this.TPrice.Name = "TPrice";
             this.TPrice.ReadOnly = true;
             // 
-            // textBox2
+            // panel4
             // 
-            this.textBox2.Location = new System.Drawing.Point(1009, 31);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(293, 31);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.panel4.AutoSize = true;
+            this.panel4.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Controls.Add(this.PDate);
+            this.panel4.Controls.Add(this.QuantutyInput);
+            this.panel4.Controls.Add(this.label5);
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.DidInput);
+            this.panel4.Controls.Add(this.DrugID);
+            this.panel4.Location = new System.Drawing.Point(69, 669);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(694, 250);
+            this.panel4.TabIndex = 6;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(138, 167);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(117, 45);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Date : ";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // PDate
+            // 
+            this.PDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.PDate.Location = new System.Drawing.Point(261, 172);
+            this.PDate.Name = "PDate";
+            this.PDate.Size = new System.Drawing.Size(402, 44);
+            this.PDate.TabIndex = 15;
+            // 
+            // QuantutyInput
+            // 
+            this.QuantutyInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuantutyInput.Location = new System.Drawing.Point(263, 100);
+            this.QuantutyInput.Name = "QuantutyInput";
+            this.QuantutyInput.Size = new System.Drawing.Size(400, 44);
+            this.QuantutyInput.TabIndex = 7;
+            this.QuantutyInput.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(81, 96);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(176, 45);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Quantity : ";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(12, 172);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 45);
+            this.label4.TabIndex = 2;
+            // 
+            // SSN
+            // 
+            this.SSN.AutoSize = true;
+            this.SSN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SSN.ForeColor = System.Drawing.Color.White;
+            this.SSN.Location = new System.Drawing.Point(3, 18);
+            this.SSN.Name = "SSN";
+            this.SSN.Size = new System.Drawing.Size(261, 45);
+            this.SSN.TabIndex = 0;
+            this.SSN.Text = "Customer SSN : ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(12, 172);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 45);
+            this.label2.TabIndex = 2;
+            // 
+            // SSNInput
+            // 
+            this.SSNInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SSNInput.Location = new System.Drawing.Point(270, 22);
+            this.SSNInput.Name = "SSNInput";
+            this.SSNInput.Size = new System.Drawing.Size(293, 44);
+            this.SSNInput.TabIndex = 4;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.BranchComboBox);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.SSNInput);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.SSN);
+            this.panel2.Location = new System.Drawing.Point(62, 190);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1336, 93);
+            this.panel2.TabIndex = 3;
+            // 
+            // BranchComboBox
+            // 
+            this.BranchComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BranchComboBox.FormattingEnabled = true;
+            this.BranchComboBox.Location = new System.Drawing.Point(984, 22);
+            this.BranchComboBox.Name = "BranchComboBox";
+            this.BranchComboBox.Size = new System.Drawing.Size(313, 45);
+            this.BranchComboBox.TabIndex = 7;
+            this.BranchComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -304,15 +300,55 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(799, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(185, 45);
+            this.label1.Size = new System.Drawing.Size(151, 45);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Branch ID :";
+            this.label1.Text = "Branch : ";
             this.label1.Click += new System.EventHandler(this.label1_Click_2);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Green;
+            this.button1.FlatAppearance.BorderSize = 3;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Snow;
+            this.button1.Location = new System.Drawing.Point(822, 668);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(162, 91);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "➕ Add";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // Remove
+            // 
+            this.Remove.BackColor = System.Drawing.Color.OrangeRed;
+            this.Remove.FlatAppearance.BorderSize = 3;
+            this.Remove.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Remove.ForeColor = System.Drawing.Color.Snow;
+            this.Remove.Location = new System.Drawing.Point(1020, 669);
+            this.Remove.Name = "Remove";
+            this.Remove.Size = new System.Drawing.Size(162, 91);
+            this.Remove.TabIndex = 8;
+            this.Remove.Text = "🗑️ Delete";
+            this.Remove.UseVisualStyleBackColor = false;
+            // 
+            // Clear
+            // 
+            this.Clear.BackColor = System.Drawing.Color.Gray;
+            this.Clear.FlatAppearance.BorderSize = 3;
+            this.Clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clear.ForeColor = System.Drawing.Color.Snow;
+            this.Clear.Location = new System.Drawing.Point(1215, 668);
+            this.Clear.Name = "Clear";
+            this.Clear.Size = new System.Drawing.Size(162, 91);
+            this.Clear.TabIndex = 9;
+            this.Clear.Text = "🔄 Clear";
+            this.Clear.UseVisualStyleBackColor = false;
+            this.Clear.Click += new System.EventHandler(this.button3_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(913, 789);
+            this.label3.Location = new System.Drawing.Point(979, 825);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 25);
             this.label3.TabIndex = 10;
@@ -323,20 +359,21 @@
             this.TotalBill.AutoSize = true;
             this.TotalBill.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotalBill.ForeColor = System.Drawing.Color.White;
-            this.TotalBill.Location = new System.Drawing.Point(763, 807);
+            this.TotalBill.Location = new System.Drawing.Point(829, 837);
             this.TotalBill.Name = "TotalBill";
-            this.TotalBill.Size = new System.Drawing.Size(155, 50);
+            this.TotalBill.Size = new System.Drawing.Size(307, 50);
             this.TotalBill.TabIndex = 11;
-            this.TotalBill.Text = "Total = ";
+            this.TotalBill.Text = "Total = 0.00 EGP";
             this.TotalBill.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.TotalBill.Click += new System.EventHandler(this.label6_Click);
             // 
             // Confirm
             // 
             this.Confirm.BackColor = System.Drawing.Color.LimeGreen;
-            this.Confirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Confirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Confirm.ForeColor = System.Drawing.Color.Snow;
-            this.Confirm.Location = new System.Drawing.Point(1153, 868);
+            this.Confirm.Location = new System.Drawing.Point(1119, 943);
+            this.Confirm.Margin = new System.Windows.Forms.Padding(3, 3, 3, 30);
             this.Confirm.Name = "Confirm";
             this.Confirm.Size = new System.Drawing.Size(241, 92);
             this.Confirm.TabIndex = 12;
@@ -349,7 +386,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(1432, 1049);
+            this.ClientSize = new System.Drawing.Size(1432, 1092);
             this.Controls.Add(this.Confirm);
             this.Controls.Add(this.TotalBill);
             this.Controls.Add(this.label3);
@@ -405,9 +442,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn TPrice;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label TotalBill;
         private System.Windows.Forms.Button Confirm;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DateTimePicker PDate;
+        private System.Windows.Forms.ComboBox BranchComboBox;
     }
 }
