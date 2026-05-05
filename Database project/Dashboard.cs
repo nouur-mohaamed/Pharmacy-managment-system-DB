@@ -21,6 +21,12 @@ namespace Database_project
             LoadTopDrugsChart();
         }
 
+        private void Dashboard_Activated(object sender, EventArgs e)
+        {
+            LoadStats();
+            LoadTopDrugsChart();
+        }
+
         private void LoadStats()
         {
             try

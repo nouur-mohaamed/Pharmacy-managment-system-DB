@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblSubtitle = new System.Windows.Forms.Label();
             this.btnInventory = new System.Windows.Forms.Button();
@@ -296,23 +296,23 @@
             // 
             // chartTopDrugs
             // 
-            chartArea1.AxisX.Interval = 1D;
-            chartArea1.AxisX.MajorGrid.Enabled = false;
-            chartArea1.AxisY.LabelStyle.Interval = 5D;
-            chartArea1.AxisY.MajorGrid.Enabled = false;
-            chartArea1.Name = "ChartArea1";
-            this.chartTopDrugs.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartTopDrugs.Legends.Add(legend1);
+            chartArea2.AxisX.Interval = 1D;
+            chartArea2.AxisX.MajorGrid.Enabled = false;
+            chartArea2.AxisY.LabelStyle.Interval = 5D;
+            chartArea2.AxisY.MajorGrid.Enabled = false;
+            chartArea2.Name = "ChartArea1";
+            this.chartTopDrugs.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartTopDrugs.Legends.Add(legend2);
             this.chartTopDrugs.Location = new System.Drawing.Point(271, 323);
             this.chartTopDrugs.Name = "chartTopDrugs";
             this.chartTopDrugs.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
             this.chartTopDrugs.Size = new System.Drawing.Size(440, 236);
             this.chartTopDrugs.TabIndex = 11;
             this.chartTopDrugs.Text = "chart1";
-            title1.Name = "Title1";
-            title1.Text = "Top Drugs Sold";
-            this.chartTopDrugs.Titles.Add(title1);
+            title2.Name = "Title1";
+            title2.Text = "Top Drugs Sold";
+            this.chartTopDrugs.Titles.Add(title2);
             // 
             // Dashboard
             // 
@@ -332,6 +332,7 @@
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
+            this.Activated += new System.EventHandler(this.Dashboard_Activated);
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.pnlTotalDrugs.ResumeLayout(false);
             this.pnlTotalDrugs.PerformLayout();
