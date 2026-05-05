@@ -56,7 +56,7 @@
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(159, 140);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(896, 67);
+            this.lblTitle.Size = new System.Drawing.Size(669, 52);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Pharmacy Management System";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -69,7 +69,7 @@
             this.lblSubtitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.lblSubtitle.Location = new System.Drawing.Point(12, 347);
             this.lblSubtitle.Name = "lblSubtitle";
-            this.lblSubtitle.Size = new System.Drawing.Size(0, 50);
+            this.lblSubtitle.Size = new System.Drawing.Size(0, 37);
             this.lblSubtitle.TabIndex = 1;
             // 
             // btnInventory
@@ -131,7 +131,7 @@
             this.btnRecords.ForeColor = System.Drawing.Color.White;
             this.btnRecords.Location = new System.Drawing.Point(735, 0);
             this.btnRecords.Name = "btnRecords";
-            this.btnRecords.Size = new System.Drawing.Size(245, 94);
+            this.btnRecords.Size = new System.Drawing.Size(275, 94);
             this.btnRecords.TabIndex = 5;
             this.btnRecords.Text = "📋 Records";
             this.btnRecords.UseVisualStyleBackColor = false;
@@ -144,7 +144,7 @@
             this.pnlTotalDrugs.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlTotalDrugs.Controls.Add(this.lblTotalDrugs);
             this.pnlTotalDrugs.Controls.Add(this.label1);
-            this.pnlTotalDrugs.Location = new System.Drawing.Point(201, 301);
+            this.pnlTotalDrugs.Location = new System.Drawing.Point(201, 312);
             this.pnlTotalDrugs.Name = "pnlTotalDrugs";
             this.pnlTotalDrugs.Size = new System.Drawing.Size(223, 133);
             this.pnlTotalDrugs.TabIndex = 6;
@@ -156,7 +156,7 @@
             this.lblTotalDrugs.ForeColor = System.Drawing.Color.Lime;
             this.lblTotalDrugs.Location = new System.Drawing.Point(47, 57);
             this.lblTotalDrugs.Name = "lblTotalDrugs";
-            this.lblTotalDrugs.Size = new System.Drawing.Size(58, 63);
+            this.lblTotalDrugs.Size = new System.Drawing.Size(43, 46);
             this.lblTotalDrugs.TabIndex = 1;
             this.lblTotalDrugs.Text = "0";
             // 
@@ -166,7 +166,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 31);
+            this.label1.Size = new System.Drawing.Size(124, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Total Drugs";
             // 
@@ -177,7 +177,7 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.lblLowStock);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(560, 301);
+            this.panel1.Location = new System.Drawing.Point(560, 312);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(223, 133);
             this.panel1.TabIndex = 7;
@@ -189,7 +189,7 @@
             this.lblLowStock.ForeColor = System.Drawing.Color.Red;
             this.lblLowStock.Location = new System.Drawing.Point(47, 57);
             this.lblLowStock.Name = "lblLowStock";
-            this.lblLowStock.Size = new System.Drawing.Size(58, 63);
+            this.lblLowStock.Size = new System.Drawing.Size(43, 46);
             this.lblLowStock.TabIndex = 1;
             this.lblLowStock.Text = "0";
             // 
@@ -199,7 +199,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(229, 31);
+            this.label3.Size = new System.Drawing.Size(170, 25);
             this.label3.TabIndex = 0;
             this.label3.Text = "Low Stock Items";
             // 
@@ -212,15 +212,15 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(972, 94);
+            this.panel2.Size = new System.Drawing.Size(1002, 94);
             this.panel2.TabIndex = 8;
             // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(972, 572);
+            this.ClientSize = new System.Drawing.Size(1002, 583);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlTotalDrugs);

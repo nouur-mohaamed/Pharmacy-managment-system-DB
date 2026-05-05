@@ -37,14 +37,17 @@ namespace Database_project
             try
             {
                 OpenConnection();
-                string query = @"SELECT c.CSSN, c.First_Name, c.Last_Name, c.E_MAIL, 
-                                p.C_PHONE AS Phone, c.C_CITY, c.C_STREET, c.C_BUILDINGNUM 
-                                FROM CUSTOMER c
-                                LEFT JOIN PHONE p ON c.CSSN = p.C_SSN";
+                string query = @"SELECT c.CSSN, c.First_Name, c.Last_Name, c.E_MAIL,
+                        STUFF((SELECT ', ' + ph.C_PHONE 
+                               FROM PHONE ph WHERE ph.C_SSN = c.CSSN 
+                               FOR XML PATH('')), 1, 2, '') AS Phone,
+                        c.C_CITY, c.C_STREET, c.C_BUILDINGNUM 
+                        FROM CUSTOMER c";
                 SqlDataAdapter da = new SqlDataAdapter(query, conn);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dgvCustomers.DataSource = dt;
+                dgvCustomers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
             catch (Exception ex)
             {
@@ -204,21 +207,34 @@ namespace Database_project
             try
             {
                 OpenConnection();
-                // Search by phone number primarily, also by name and SSN
+                string searchTerm = "";
+
+                //Serach by Phone or Name or SSN
+                if (txtSSN.Text != "") searchTerm = txtSSN.Text;
+                else if (txtFirstName.Text != "") searchTerm = txtFirstName.Text;
+                else if (txtLastName.Text != "") searchTerm = txtLastName.Text;
+                else if (txtPhone.Text != "") searchTerm = txtPhone.Text;
+
                 string query = @"SELECT c.CSSN, c.First_Name, c.Last_Name, c.E_MAIL,
-                                p.C_PHONE AS Phone, c.C_CITY, c.C_STREET, c.C_BUILDINGNUM
-                                FROM CUSTOMER c
-                                LEFT JOIN PHONE p ON c.CSSN = p.C_SSN
-                                WHERE p.C_PHONE LIKE @search 
-                                OR c.First_Name LIKE @search 
-                                OR c.Last_Name LIKE @search
-                                OR c.CSSN LIKE @search";
+                        STUFF((SELECT ', ' + ph.C_PHONE 
+                               FROM PHONE ph WHERE ph.C_SSN = c.CSSN 
+                               FOR XML PATH('')), 1, 2, '') AS Phone,
+                        c.C_CITY, c.C_STREET, c.C_BUILDINGNUM
+                        FROM CUSTOMER c
+                        WHERE c.CSSN LIKE @search 
+                        OR c.First_Name LIKE @search 
+                        OR c.Last_Name LIKE @search
+                        OR EXISTS (SELECT 1 FROM PHONE p 
+                                  WHERE p.C_SSN = c.CSSN 
+                                  AND p.C_PHONE LIKE @search)";
+
                 SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@search", "%" + txtPhone.Text + "%");
+                cmd.Parameters.AddWithValue("@search", "%" + searchTerm + "%");
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dgvCustomers.DataSource = dt;
+                dgvCustomers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
             catch (Exception ex)
             {

@@ -30,8 +30,8 @@ namespace Database_project
         private void record_managment_Load(object sender, EventArgs e)
         {
             cmbTable.SelectedIndex = 0;
-            dtpFrom.Value = DateTime.Now.AddMonths(-1);
-            dtpTo.Value = DateTime.Now;
+            dtpFrom.Value = new DateTime(2026, 1, 1); // Start of year
+            dtpTo.Value = DateTime.Now.AddDays(1);    // Tomorrow to include today
             LoadRecords();
         }
 
