@@ -407,17 +407,21 @@ namespace Database_project
                 if (showingby.Text.Contains("All"))
                 {
                     string query = @"SELECT d.SERIAL_NUM, d.D_NAME,
-                ISNULL(SUM(e.CURRENT_QUANTITY),0) AS Amount,
-                d.CATEGORY, d.SUPPLIER
-                FROM DRUG d
-                LEFT JOIN EXIST_IN e ON d.SERIAL_NUM = e.Serial_NUM
-                WHERE (@id = '' OR d.SERIAL_NUM LIKE '%' + @id + '%')
-                AND (@name = '' OR d.D_NAME LIKE '%' + @name + '%')
-                GROUP BY d.SERIAL_NUM,d.D_NAME,d.CATEGORY,d.SUPPLIER";
+                    ISNULL(SUM(e.CURRENT_QUANTITY),0) AS Amount,
+                    d.CATEGORY, d.SUPPLIER
+                    FROM DRUG d
+                    LEFT JOIN EXIST_IN e ON d.SERIAL_NUM = e.Serial_NUM
+                    LEFT JOIN BRANCH b ON e.B_ID = b.BID
+                    WHERE (@id = '' OR d.SERIAL_NUM LIKE '%' + @id + '%')
+                    AND (@name = '' OR d.D_NAME LIKE '%' + @name + '%')
+                    AND (@branch = '' OR b.BNAME = @branch)
+                    GROUP BY d.SERIAL_NUM,d.D_NAME,d.CATEGORY,d.SUPPLIER";
 
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@id", DidInput.Text);
                     cmd.Parameters.AddWithValue("@name", DnameInput.Text);
+                    cmd.Parameters.AddWithValue("@branch",
+                    BranchComboBox.SelectedIndex == 0 ? "" : BranchComboBox.Text);
 
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     da.Fill(dt);
@@ -430,17 +434,20 @@ namespace Database_project
                 else if (showingby.Text.Contains("Branch"))
                 {
                     string query = @"SELECT d.SERIAL_NUM, d.D_NAME,
-                b.BNAME AS Branch,
-                e.CURRENT_QUANTITY AS Amount,
-                d.CATEGORY, d.SUPPLIER
-                FROM DRUG d
-                JOIN EXIST_IN e ON d.SERIAL_NUM = e.Serial_NUM
-                JOIN BRANCH b ON e.B_ID = b.BID
-                WHERE (@id = '' OR d.SERIAL_NUM LIKE '%' + @id + '%')
-                AND (@name = '' OR d.D_NAME LIKE '%' + @name + '%')";
+                                    b.BNAME AS Branch,
+                                    e.CURRENT_QUANTITY AS Amount,
+                                    d.CATEGORY, d.SUPPLIER
+                                    FROM DRUG d
+                                    JOIN EXIST_IN e ON d.SERIAL_NUM = e.Serial_NUM
+                                    JOIN BRANCH b ON e.B_ID = b.BID
+                                    WHERE (@id = '' OR d.SERIAL_NUM LIKE '%' + @id + '%')
+                                    AND (@name = '' OR d.D_NAME LIKE '%' + @name + '%')
+                                    AND (@branch = '' OR b.BNAME = @branch)";
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@id", DidInput.Text);
                     cmd.Parameters.AddWithValue("@name", DnameInput.Text);
+                    cmd.Parameters.AddWithValue("@branch",
+                    BranchComboBox.SelectedIndex == 0 ? "" : BranchComboBox.Text);
 
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     da.Fill(dt);

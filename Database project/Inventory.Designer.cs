@@ -86,7 +86,7 @@ namespace Database_project
             this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1474, 130);
             this.panel1.TabIndex = 2;
@@ -108,7 +108,7 @@ namespace Database_project
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Location = new System.Drawing.Point(620, 100);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(8, 8);
             this.flowLayoutPanel1.TabIndex = 0;
@@ -127,7 +127,7 @@ namespace Database_project
             this.Category,
             this.supplier});
             this.dataGridView1.Location = new System.Drawing.Point(28, 246);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(30, 30, 30, 30);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(30);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 82;
@@ -205,7 +205,7 @@ namespace Database_project
             this.panel4.Controls.Add(this.DidInput);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Location = new System.Drawing.Point(70, 656);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1358, 302);
             this.panel4.TabIndex = 7;
@@ -215,7 +215,7 @@ namespace Database_project
             this.BranchComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BranchComboBox.FormattingEnabled = true;
             this.BranchComboBox.Location = new System.Drawing.Point(936, 200);
-            this.BranchComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BranchComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.BranchComboBox.Name = "BranchComboBox";
             this.BranchComboBox.Size = new System.Drawing.Size(384, 45);
             this.BranchComboBox.TabIndex = 15;
@@ -236,7 +236,7 @@ namespace Database_project
             // 
             this.cat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cat.Location = new System.Drawing.Point(268, 200);
-            this.cat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cat.Margin = new System.Windows.Forms.Padding(4);
             this.cat.Name = "cat";
             this.cat.Size = new System.Drawing.Size(400, 44);
             this.cat.TabIndex = 13;
@@ -259,7 +259,7 @@ namespace Database_project
             // 
             this.DsupplierInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DsupplierInput.Location = new System.Drawing.Point(920, 122);
-            this.DsupplierInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DsupplierInput.Margin = new System.Windows.Forms.Padding(4);
             this.DsupplierInput.Name = "DsupplierInput";
             this.DsupplierInput.Size = new System.Drawing.Size(400, 44);
             this.DsupplierInput.TabIndex = 11;
@@ -281,7 +281,7 @@ namespace Database_project
             // 
             this.DnameInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DnameInput.Location = new System.Drawing.Point(920, 24);
-            this.DnameInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DnameInput.Margin = new System.Windows.Forms.Padding(4);
             this.DnameInput.Name = "DnameInput";
             this.DnameInput.Size = new System.Drawing.Size(400, 44);
             this.DnameInput.TabIndex = 9;
@@ -305,7 +305,7 @@ namespace Database_project
             // 
             this.QuantutyInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QuantutyInput.Location = new System.Drawing.Point(268, 108);
-            this.QuantutyInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.QuantutyInput.Margin = new System.Windows.Forms.Padding(4);
             this.QuantutyInput.Name = "QuantutyInput";
             this.QuantutyInput.Size = new System.Drawing.Size(400, 44);
             this.QuantutyInput.TabIndex = 7;
@@ -339,7 +339,7 @@ namespace Database_project
             // 
             this.DidInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DidInput.Location = new System.Drawing.Point(268, 20);
-            this.DidInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DidInput.Margin = new System.Windows.Forms.Padding(4);
             this.DidInput.Name = "DidInput";
             this.DidInput.Size = new System.Drawing.Size(400, 44);
             this.DidInput.TabIndex = 5;
@@ -366,7 +366,7 @@ namespace Database_project
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.White;
             this.btnClear.Location = new System.Drawing.Point(1224, 984);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(184, 80);
             this.btnClear.TabIndex = 28;
@@ -380,10 +380,10 @@ namespace Database_project
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(1272, 148);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearch.Location = new System.Drawing.Point(1263, 148);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(184, 80);
+            this.btnSearch.Size = new System.Drawing.Size(193, 80);
             this.btnSearch.TabIndex = 27;
             this.btnSearch.Text = "🔍 Search\r\n";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -396,7 +396,7 @@ namespace Database_project
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Location = new System.Drawing.Point(532, 984);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(184, 80);
             this.btnDelete.TabIndex = 26;
@@ -408,10 +408,10 @@ namespace Database_project
             this.btnUpdate.BackColor = System.Drawing.Color.Orange;
             this.btnUpdate.FlatAppearance.BorderSize = 3;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(304, 984);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdate.Location = new System.Drawing.Point(300, 984);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(184, 80);
             this.btnUpdate.TabIndex = 25;
@@ -426,7 +426,7 @@ namespace Database_project
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Location = new System.Drawing.Point(76, 984);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(184, 80);
             this.btnAdd.TabIndex = 24;
@@ -440,8 +440,8 @@ namespace Database_project
             this.showingby.Items.AddRange(new object[] {
             "Branch ",
             "All Branches"});
-            this.showingby.Location = new System.Drawing.Point(264, 154);
-            this.showingby.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.showingby.Location = new System.Drawing.Point(264, 168);
+            this.showingby.Margin = new System.Windows.Forms.Padding(4);
             this.showingby.Name = "showingby";
             this.showingby.Size = new System.Drawing.Size(384, 45);
             this.showingby.TabIndex = 30;
@@ -479,7 +479,7 @@ namespace Database_project
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.backBtn);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Inventory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inventory";
