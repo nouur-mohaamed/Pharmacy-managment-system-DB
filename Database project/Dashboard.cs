@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -17,6 +18,13 @@ namespace Database_project
         private void Dashboard_Load(object sender, EventArgs e)
         {
             LoadStats();
+            LoadTopDrugsChart();
+        }
+
+        private void Dashboard_Activated(object sender, EventArgs e)
+        {
+            LoadStats();
+            LoadTopDrugsChart();
         }
 
         private void LoadStats()
@@ -31,11 +39,70 @@ namespace Database_project
                 string lowStockQuery = "SELECT COUNT(*) FROM EXIST_IN WHERE CURRENT_QUANTITY < 50";
                 SqlCommand cmd2 = new SqlCommand(lowStockQuery, conn);
                 lblLowStock.Text = cmd2.ExecuteScalar().ToString();
+
+                string totalCustomers = "SELECT COUNT(*) FROM CUSTOMER";
+                lblTotalCustomers.Text = new SqlCommand(totalCustomers, conn).ExecuteScalar().ToString();
+
+                string dailySalesQuery = @"SELECT SUM(P.Purchased_Quantity * D.PRICE) 
+                                   FROM PURCHASE P 
+                                   JOIN DRUG D ON P.Serial_NUM = D.SERIAL_NUM 
+                                   WHERE CAST(P.Purchase_Date AS DATE) = CAST(GETDATE() AS DATE)";
+
+                SqlCommand cmdDaily = new SqlCommand(dailySalesQuery, conn);
+                object result = cmdDaily.ExecuteScalar();
+                if (result != DBNull.Value)
+                {
+                    lblDailySales.Text = string.Format("{0:C}", result); 
+                }
+                else
+                {
+                    lblDailySales.Text = "$0.00";
+                }
+
+
+
                 conn.Close();
+
+                
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Database error: " + ex.Message);
+            }
+        }
+
+        private void LoadTopDrugsChart()
+        {
+            try
+            {
+                chartTopDrugs.Series.Clear(); 
+                conn.Open();
+
+                string query = @"SELECT TOP 5 D.D_NAME, SUM(P.Purchased_Quantity) as TotalSold
+                        FROM PURCHASE P
+                        JOIN DRUG D ON P.Serial_NUM = D.SERIAL_NUM
+                        GROUP BY D.D_NAME
+                        ORDER BY TotalSold DESC";
+
+                SqlDataAdapter da = new SqlDataAdapter(query, conn);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                var series = new System.Windows.Forms.DataVisualization.Charting.Series("Units Sold");
+                series.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+                chartTopDrugs.Series.Add(series);
+
+                chartTopDrugs.DataSource = dt;
+                series.XValueMember = "D_NAME";
+                series.YValueMembers = "TotalSold";
+
+                chartTopDrugs.DataBind();
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                if (conn.State == ConnectionState.Open) conn.Close();
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
 
@@ -66,5 +133,6 @@ namespace Database_project
             records.Show();
             this.Hide();
         }
+
     }
 }
